@@ -17,6 +17,20 @@ canvas.pack(padx=15, pady=15)
 Label(canvas, text='a³k² Tech', anchor='e', bg='#2C001E', fg='white', font=('Corbel Light', 24, 'bold')).grid(row=0, columnspan=4, sticky='ew', padx=4, pady=2)
 
 #=====================================================================================================================================================================#
+def btn_click(values): #Calculator buttons click event
+    store=lblText.get()
+    if store=="Error":
+        lblText.set("")
+    else:
+        lblText.set(store+values)
+#=====================================================================================================================================================================#
+
+def btn_eql_click(): #Equal button click event
+    try:
+        lblText.set(eval(lblText.get()))
+    except:
+        lblText.set("Error")
+#=====================================================================================================================================================================#
 
 #Text variable for the display screen
 lblText = StringVar()
