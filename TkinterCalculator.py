@@ -17,3 +17,10 @@ canvas.pack(padx=15, pady=15)
 Label(canvas, text='a³k² Tech', anchor='e', bg='#2C001E', fg='white', font=('Corbel Light', 24, 'bold')).grid(row=0, columnspan=4, sticky='ew', padx=4, pady=2)
 
 #=====================================================================================================================================================================#
+
+#Text variable for the display screen
+lblText = StringVar()
+
+#Display screen design
+lbl_Display = Label(canvas, textvariable=lblText, anchor='e', bg='black', fg='red', font=('Digital-7',48)).grid(row=1, columnspan=4, sticky='ew', padx=4, pady=2)
+#=====================================================================================================================================================================#
