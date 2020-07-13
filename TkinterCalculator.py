@@ -32,6 +32,16 @@ def btn_eql_click(): #Equal button click event
         lblText.set("Error")
 #=====================================================================================================================================================================#
 
+def btn_backspace(): #To clear digits one by one
+    lblText.set(lblText.get()[:-1])
+#=====================================================================================================================================================================#
+
+def btn_clear(): #To clear the display screen completely
+    lblText.set("")
+#=====================================================================================================================================================================#
+
+
+
 #Text variable for the display screen
 lblText = StringVar()
 
@@ -65,3 +75,8 @@ btn0=       Button(canvas, text="0", command=lambda: btn_click("0"), bg=WHT, fg=
 btn_point=  Button(canvas, text=".", command=lambda: btn_click('.'), bg=WHT, fg="red", width=7, height=2, font=("Digital-7", 28)).grid(row=6, column=1,padx=4, pady=4)
 btn_root=   Button(canvas, text='x²', command=btn_square,            bg=WHT, fg="red", width=7, height=2, font=("Digital-7", 28)).grid(row=6, column=2,padx=4, pady=4)
 btn_eql=    Button(canvas, text="=", command=btn_eql_click,          bg="#F8B605", fg="red", width=7, height=2, font=("Digital-7", 28)).grid(row=6, column=3,padx=4, pady=4)
+#=====================================================================================================================================================================#
+
+main loop()
+
+
