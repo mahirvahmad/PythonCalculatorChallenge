@@ -9,7 +9,8 @@ CC = "#ffdead" #Chocolate Chip Cookies
 #=====================================================================================================================================================================#
 #Prepaing the ground for building the Calculator
 calc = Tk()
-calc.title("                                   +1-2%3√4/5* CALCULATOR *6/7√8%9-0+")
+blank_space = " "
+calc.title(50 * blank_space + "+1-2%3√4/5* CALCULATOR *6/7√8%9-0+")
 #calc.iconbitmap('calcico.ico')
 calc.config(bg="#2C001E")
 canvas=Canvas(calc,bg='#2C001E')
@@ -40,7 +41,18 @@ def btn_clear(): #To clear the display screen completely
     lblText.set("")
 #=====================================================================================================================================================================#
 
+def btn_square(): #To Find out Square of a number
+    store = lblText.get()
+    sqr = float(store)
+    lblText.set(sqr*sqr)
+#=====================================================================================================================================================================#
 
+def btn_percent(): #To Find out Percentage of a number
+    store = lblText.get()
+    total = float(eval(store)) / 100
+    lblText.set(total)
+
+#=====================================================================================================================================================================#
 
 #Text variable for the display screen
 lblText = StringVar()
@@ -77,6 +89,6 @@ btn_root=   Button(canvas, text='x²', command=btn_square,            bg=WHT, fg
 btn_eql=    Button(canvas, text="=", command=btn_eql_click,          bg="#F8B605", fg="red", width=7, height=2, font=("Digital-7", 28)).grid(row=6, column=3,padx=4, pady=4)
 #=====================================================================================================================================================================#
 
-main loop()
+mainloop()
 
 
